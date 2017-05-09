@@ -53,7 +53,8 @@
         context.lineWidth = 6;
         // line color
         context.strokeStyle = '#e9cd07';
-        context.stroke();context.beginPath();
+        context.stroke();
+        context.beginPath();
         context.arc(x, y, radius, 1.8 * Math.PI, 2.1 * Math.PI, counterClockwise);
         context.lineWidth = 6;
         // line color
@@ -61,6 +62,18 @@
         context.stroke();
 
 
+
+        context.beginPath();
+        context.strokeStyle = "#ddd";
+        context.lineWidth = 1;
+        context.arc(x/2+75 , y/2 +80, 58, 0, Math.PI * 2);
+        context.shadowColor = '#fff';
+        context.closePath();
+        context.stroke();
+        var text="3.5";
+        context.font = '20px Arial';
+        context.fillStyle = '#222';
+        context.fillText(text, x/2+60 , y/2 +90);
 
     }
 </script>
