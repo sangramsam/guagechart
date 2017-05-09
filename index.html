@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chart js</title>
+</head>
+<body>
+<canvas id="canvas" width="300" height="300"></canvas>
+</body>
+<style>
+    body {
+        background: #fff
+    }
+    /*Centering the gauge*/
+    #canvas {
+        display: block;
+        width: 300px;
+        margin: 100px auto;
+    }
+    /*Custom font for numbers*/
+    @font-face {
+        font-family: "bebas";
+        src: url("http://thecodeplayer.com/uploads/fonts/BebasNeue.otf");
+    }
+</style>
+<script>
+    window.onload = function(){
+        //canvas initialization
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        var x = canvas.width / 2;
+        var y = canvas.height / 2;
+        var radius = 100;
+        var startAngle = 0.9 * Math.PI;
+        var endAngle =1.2 * Math.PI;
+        var counterClockwise = false;
+
+        context.beginPath();
+        context.arc(x, y, radius, startAngle, endAngle, counterClockwise);
+        context.lineWidth = 6;
+
+        // line color
+        context.strokeStyle = '#25bc09';
+        context.stroke();
+        context.beginPath();
+        context.arc(x, y, radius, 1.2 * Math.PI, 1.5 * Math.PI, counterClockwise);
+        context.lineWidth = 6;
+        // line color
+        context.strokeStyle = '#b1d835';
+        context.stroke();
+        context.beginPath();
+        context.arc(x, y, radius, 1.5 * Math.PI, 1.8 * Math.PI, counterClockwise);
+        context.lineWidth = 6;
+        // line color
+        context.strokeStyle = '#e9cd07';
+        context.stroke();context.beginPath();
+        context.arc(x, y, radius, 1.8 * Math.PI, 2.1 * Math.PI, counterClockwise);
+        context.lineWidth = 6;
+        // line color
+        context.strokeStyle = '#fa1e03';
+        context.stroke();
+
+
+
+    }
+</script>
+</html>
